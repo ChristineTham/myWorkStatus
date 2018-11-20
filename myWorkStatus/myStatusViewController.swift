@@ -9,11 +9,28 @@
 import UIKit
 
 class myStatusViewController: UIViewController {
-
+    
+    //MARK: - Outlets
+    
+    @IBOutlet weak var statusImage: UIImageView!
+    @IBOutlet weak var statusLabel: UILabel!
+    @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var locationImage: UIImageView!
+    @IBOutlet weak var nextLabel: UILabel!
+    @IBOutlet weak var nextImage: UIImageView!
+    
+    //MARK: - Initialisation
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        statusImage.image = me.status.getImage()
+        statusLabel.text = me.status.getLabel()
+        locationLabel.text = me.currLocation?.format()
+        locationImage.image = me.currLocation?.image
+        nextLabel.text = me.nextLocation?.format()
+        nextImage.image = me.nextLocation?.image
     }
     
 
@@ -26,5 +43,7 @@ class myStatusViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
+    //MARK: private functions
+    
 }
