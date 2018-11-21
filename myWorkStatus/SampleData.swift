@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-let secondsinDay = 24.0*60*60
+private let secondsinDay = 24.0*60*60
 
 var transportLocations: [String : Location] = [
     "L1,MacqPark" : Location(
@@ -61,6 +61,31 @@ private let travelling = Location(
     start: Date(), end: Date(timeIntervalSinceNow: 3600.0),
     image: #imageLiteral(resourceName: "Travel"),
     type: .Other("travelling"), gps: nil
+)
+
+private let outOfOffice = Location(
+    title: "Out of Office", address: "n/a",
+    start: Date(), end: Date(timeIntervalSinceNow: 3600.0),
+    image: #imageLiteral(resourceName: "OutOfOffice"),
+    type: .Other("contactable via mobile"), gps: nil
+)
+
+private let abwPitt = Location(
+    title: "Level 25",
+    address: "477 Pitt Street\nHaymarket NSW 2008",
+    start: nil, end: nil,
+    image: #imageLiteral(resourceName: "L25Pitt"),
+    type: .Desk,
+    gps: nil
+)
+
+private let abwMacq = Location(
+    title: "Level 1",
+    address: "22 Giffnock Avenue\nMacquarie Park NSW 2113",
+    start: nil, end: nil,
+    image: #imageLiteral(resourceName: "L25Pitt"),
+    type: .Desk,
+    gps: nil
 )
 
 var myTeam = [
@@ -134,4 +159,63 @@ var myTeam = [
         currLocation: myHome,
         nextLocation: myHome
     ),
+]
+
+var myActivities = [
+    Activity(
+        activity: "At Home",
+        start: DateComponents(hour: 6),
+        end: DateComponents(hour: 7),
+        status: .Home,
+        image: #imageLiteral(resourceName: "Home"),
+        location: myHome
+    ),
+    Activity(
+        activity: "Travelling",
+        start: DateComponents(hour: 7),
+        end: DateComponents(hour: 8),
+        status: .Travel,
+        image: #imageLiteral(resourceName: "Travel"),
+        location: travelling
+    ),
+    Activity(
+        activity: "ABW Desk #42",
+        start: DateComponents(hour: 8),
+        end: DateComponents(hour: 11),
+        status: .AtDesk,
+        image: #imageLiteral(resourceName: "ABW25Pitt"),
+        location: abwPitt
+    ),
+    Activity(
+        activity: "Meeting:",
+        start: DateComponents(hour: 11),
+        end: DateComponents(hour: 12),
+        status: .InMeeting("Weekly Management meeting"),
+        image: #imageLiteral(resourceName: "HunterPitt"),
+        location: abwPitt
+    ),
+    Activity(
+        activity: "Lunch and Travel",
+        start: DateComponents(hour: 12),
+        end: DateComponents(hour:14),
+        status: .Travel,
+        image: #imageLiteral(resourceName: "Travel"),
+        location: travelling
+    ),
+    Activity(
+        activity: "ABW Desk #1.032",
+        start: DateComponents(hour: 14),
+        end: DateComponents(hour:16),
+        status: .AtDesk,
+        image: #imageLiteral(resourceName: "ABWMacq"),
+        location: abwMacq
+    ),
+    Activity(
+        activity: "Out of Office",
+        start: DateComponents(hour: 16),
+        end: DateComponents(hour:18),
+        status: .OutOfOffice,
+        image: #imageLiteral(resourceName: "OutOfOffice"),
+        location: outOfOffice
+    )
 ]

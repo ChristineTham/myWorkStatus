@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "leest-sat.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "leest-sat.png",
       "scale" : "2x"
     },
     {

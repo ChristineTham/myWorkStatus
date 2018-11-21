@@ -28,7 +28,7 @@ enum StatusType {
         case .InMeeting:
             return "In Meeting"
         case .Event:
-            return "Event"
+            return "At Event"
         case .Travel:
             return "Travel"
         case .Home:
@@ -66,6 +66,52 @@ enum StatusType {
             return #imageLiteral(resourceName: "Other")
         }
     }
+    
+    func getForegroundColor() -> UIColor {
+        switch self {
+        case .AtDesk:
+            return #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        case .InMeeting:
+            return #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        case .Event:
+            return #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        case .Travel:
+            return #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        case .Home:
+            return #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        case .Leave:
+            return #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        case .DoNotDisturb:
+            return #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        case .OutOfOffice:
+            return #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        case .Other:
+            return #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        }
+    }
+    
+    func getBackgroundColor() -> UIColor {
+        switch self {
+        case .AtDesk:
+            return #colorLiteral(red: 0.6913105845, green: 0.7106819749, blue: 0.2170348763, alpha: 1)
+        case .InMeeting:
+            return #colorLiteral(red: 0.5067401528, green: 0.5137251019, blue: 0.526117146, alpha: 1)
+        case .Event:
+            return #colorLiteral(red: 0.5067401528, green: 0.5137251019, blue: 0.526117146, alpha: 1)
+        case .Travel:
+            return #colorLiteral(red: 0.4175251126, green: 0.8115726113, blue: 0.9541099668, alpha: 1)
+        case .Home:
+            return #colorLiteral(red: 0.4175251126, green: 0.8115726113, blue: 0.9541099668, alpha: 1)
+        case .Leave:
+            return #colorLiteral(red: 0.4175251126, green: 0.8115726113, blue: 0.9541099668, alpha: 1)
+        case .DoNotDisturb:
+            return #colorLiteral(red: 0.8876586556, green: 0.08936477453, blue: 0.2413475513, alpha: 1)
+        case .OutOfOffice:
+            return #colorLiteral(red: 0.4175251126, green: 0.8115726113, blue: 0.9541099668, alpha: 1)
+        case .Other:
+            return #colorLiteral(red: 0.5067401528, green: 0.5137251019, blue: 0.526117146, alpha: 1)
+        }
+    }
 }
 
 enum LocationType {
@@ -85,9 +131,12 @@ struct Location {
     var type : LocationType
     var gps : CLLocation?
     
-    func format() -> String {
+    func getLabel() -> String {
         let df = DateFormatter()
         var outStr = ""
+        
+        df.dateStyle = .short
+        df.timeStyle = .short
         
         if let startTime = self.start {
             outStr += df.string(from: startTime) + "\n"
@@ -118,4 +167,79 @@ struct Person {
     var image : UIImage
     var status : StatusType
     var home, defaultLocation, currLocation, nextLocation: Location?
+}
+
+struct Activity {
+    var activity : String
+    var start, end : DateComponents
+    var status : StatusType
+    var image : UIImage
+    var location : Location
+    
+    func getLabel() -> String {
+        var outStr = ""
+        switch status {
+        case .AtDesk:
+            outStr = "Location: \(activity)\n"
+            outStr += "Until \(String(end.hour!)):00\n"
+            outStr += location.address
+        case .InMeeting(let meetingText):
+            outStr = "Meeting: \(meetingText)\n"
+            outStr += "\(String(start.hour!)):00-\(String(end.hour!)):00\n"
+            outStr += location.address
+        case .Event(let eventText):
+            outStr = "Event: \(eventText)\n"
+            outStr += "\(String(start.hour!)):00-\(String(end.hour!)):00\n"
+            outStr += location.address
+        case .Travel:
+            outStr = "Travelling\nEstimated Arrival \(String(end.hour!)):00"
+        case .Home:
+            outStr = "At Home\nLeave by \(String(end.hour!)):00"
+        case .Leave:
+            outStr = "On Leave\nReturn on #TBD#"
+        case .DoNotDisturb:
+            outStr = "Do Not Disturb\nUntil \(String(end.hour!)):00"
+        case .OutOfOffice:
+            outStr = "Out of Office\nUntil \(String(end.hour!)):00"
+        case .Other(let otherText):
+            outStr = otherText
+            outStr += "\nUntil \(String(end.hour!)):00"
+        }
+        
+        return outStr
+    }
+    
+    func getNextLabel() -> String {
+        var outStr = ""
+        switch status {
+        case .AtDesk:
+            outStr = "Available\n"
+            outStr += "From \(String(start.hour!)):00\n"
+            outStr += location.address
+        case .InMeeting(let meetingText):
+            outStr = "Meeting: \(meetingText)\n"
+            outStr += "\(String(start.hour!)):00-\(String(end.hour!)):00\n"
+            outStr += location.address
+        case .Event(let eventText):
+            outStr = "Event: \(eventText)\n"
+            outStr += "\(String(start.hour!)):00-\(String(end.hour!)):00\n"
+            outStr += location.address
+        case .Travel:
+            outStr = "Estimated Departure \(String(start.hour!)):00"
+        case .Home:
+            outStr = "At Home"
+        case .Leave:
+            outStr = "On Leave\nReturn on #TBD#"
+        case .DoNotDisturb:
+            outStr = "Do Not Disturb\nFrom \(String(start.hour!)):00"
+        case .OutOfOffice:
+            outStr = "Out of Office\nFrom \(String(start.hour!)):00"
+        case .Other(let otherText):
+            outStr = otherText
+            outStr += "\nFrom \(String(start.hour!)):00"
+        }
+        
+        return outStr
+    }
+
 }
