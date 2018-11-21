@@ -18,16 +18,48 @@
                     <view key="view" contentMode="scaleToFill" id="Oey-dS-cWJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search Person" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O95-ac-TqR">
+                                <rect key="frame" x="0.0" y="28" width="375" height="36"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tmg-d0-I0x">
+                                <rect key="frame" x="317" y="72" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="EA4-gN-bfF"/>
+                                </constraints>
+                                <state key="normal" image="icons8-search_filled"/>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name (first and/or last)" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="BE9-YE-kHV">
+                                <rect key="frame" x="8" y="82" width="301" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" keyboardType="namePhonePad" returnKeyType="search" enablesReturnKeyAutomatically="YES" textContentType="name"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="BE9-YE-kHV" firstAttribute="leading" secondItem="aWf-TN-M83" secondAttribute="leading" constant="8" id="C4K-PX-fN8"/>
+                            <constraint firstItem="O95-ac-TqR" firstAttribute="leading" secondItem="aWf-TN-M83" secondAttribute="leading" id="Deh-zS-fig"/>
+                            <constraint firstItem="O95-ac-TqR" firstAttribute="top" secondItem="aWf-TN-M83" secondAttribute="top" constant="8" id="ReC-5s-A6r"/>
+                            <constraint firstItem="Tmg-d0-I0x" firstAttribute="top" secondItem="O95-ac-TqR" secondAttribute="bottom" constant="8" id="SVV-KE-DRG"/>
+                            <constraint firstItem="aWf-TN-M83" firstAttribute="trailing" secondItem="O95-ac-TqR" secondAttribute="trailing" id="hvu-Zp-iFe"/>
+                            <constraint firstItem="aWf-TN-M83" firstAttribute="trailing" secondItem="Tmg-d0-I0x" secondAttribute="trailing" constant="8" id="w9P-xD-MtW"/>
+                            <constraint firstItem="BE9-YE-kHV" firstAttribute="centerY" secondItem="Tmg-d0-I0x" secondAttribute="centerY" id="yKr-m9-RZg"/>
+                            <constraint firstItem="Tmg-d0-I0x" firstAttribute="leading" secondItem="BE9-YE-kHV" secondAttribute="trailing" constant="8" id="yoA-Qw-eY8"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="aWf-TN-M83"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Search" image="icons8-search" selectedImage="icons8-search_filled" id="NCV-Lg-C73"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EAp-xG-fC2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1436" y="1776"/>
+            <point key="canvasLocation" x="-1436" y="1775.2623688155923"/>
         </scene>
-        <!--my Teams-->
+        <!--my Team-->
         <scene sceneID="I4a-xf-FSN">
             <objects>
                 <tableViewController id="we4-lh-qMv" sceneMemberID="viewController">
@@ -50,7 +82,7 @@
                             <outlet property="delegate" destination="we4-lh-qMv" id="d1C-12-gJO"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="my Teams" image="icons8-conference_call" selectedImage="icons8-conference_call_filled" id="int-Ei-XDv"/>
+                    <tabBarItem key="tabBarItem" title="my Team" image="icons8-conference_call" selectedImage="icons8-conference_call_filled" id="int-Ei-XDv"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3V9-HW-0fM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
