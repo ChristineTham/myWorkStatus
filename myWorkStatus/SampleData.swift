@@ -53,7 +53,7 @@ private let parkHyatt = Location(
     title: "Park Hyatt Sydney", address: "7 Hickson Rd, Sydney New South Wales 2000, Australia",
     start: Date(), end: Date(timeIntervalSinceNow: secondsinDay),
     image: #imageLiteral(resourceName: "parkhyatt-sat"),
-    type: .Home, gps: nil
+    type: .Other("SAP User Group"), gps: nil
 )
 
 private let travelling = Location(
@@ -68,6 +68,13 @@ private let outOfOffice = Location(
     start: Date(), end: Date(timeIntervalSinceNow: 3600.0),
     image: #imageLiteral(resourceName: "OutOfOffice"),
     type: .Other("contactable via mobile"), gps: nil
+)
+
+private let doNotDisturb = Location(
+    title: "Do Not Disturb", address: "n/a",
+    start: Date(), end: Date(timeIntervalSinceNow: 3600.0),
+    image: #imageLiteral(resourceName: "DoNotDisturb"),
+    type: .Other("Shining baubles"), gps: nil
 )
 
 private let abwPitt = Location(
@@ -111,10 +118,10 @@ var myTeam = [
         mobile: "0413 206 633",
         email: "Himanshu.Kshetrapal@transport.nsw.gov.au",
         image: #imageLiteral(resourceName: "himanshu"),
-        status: .OutOfOffice,
+        status: .DoNotDisturb,
         home: myHome,
         defaultLocation: transportLocations["L25,477Pitt"],
-        currLocation: travelling,
+        currLocation: doNotDisturb,
         nextLocation: transportLocations["L1,MacqPark"]
     ),
     Person(

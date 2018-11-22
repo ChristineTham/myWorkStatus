@@ -70,23 +70,23 @@ enum StatusType {
     func getForegroundColor() -> UIColor {
         switch self {
         case .AtDesk:
-            return #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+            return #colorLiteral(red: 0.07797776908, green: 0.2222562134, blue: 0.4960105419, alpha: 1)
         case .InMeeting:
             return #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         case .Event:
             return #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         case .Travel:
-            return #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+            return #colorLiteral(red: 0.07797776908, green: 0.2222562134, blue: 0.4960105419, alpha: 1)
         case .Home:
-            return #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+            return #colorLiteral(red: 0.07797776908, green: 0.2222562134, blue: 0.4960105419, alpha: 1)
         case .Leave:
-            return #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+            return #colorLiteral(red: 0.07797776908, green: 0.2222562134, blue: 0.4960105419, alpha: 1)
         case .DoNotDisturb:
             return #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         case .OutOfOffice:
-            return #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+            return #colorLiteral(red: 0.07797776908, green: 0.2222562134, blue: 0.4960105419, alpha: 1)
         case .Other:
-            return #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+            return #colorLiteral(red: 0.07797776908, green: 0.2222562134, blue: 0.4960105419, alpha: 1)
         }
     }
     
@@ -109,7 +109,7 @@ enum StatusType {
         case .OutOfOffice:
             return #colorLiteral(red: 0.4175251126, green: 0.8115726113, blue: 0.9541099668, alpha: 1)
         case .Other:
-            return #colorLiteral(red: 0.5067401528, green: 0.5137251019, blue: 0.526117146, alpha: 1)
+            return #colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1)
         }
     }
 }
@@ -132,20 +132,8 @@ struct Location {
     var gps : CLLocation?
     
     func getLabel() -> String {
-        let df = DateFormatter()
         var outStr = ""
         
-        df.dateStyle = .short
-        df.timeStyle = .short
-        
-        if let startTime = self.start {
-            outStr += df.string(from: startTime) + "\n"
-        }
-
-        if let endTime = self.end {
-            outStr += df.string(from: endTime) + "\n"
-        }
-
         switch self.type {
         case .Desk, .Floor, .Building, .Address:
             outStr += self.title + "\n" + self.address
