@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import MessageUI
 
-class myTeamTableViewController: UITableViewController {
+class myTeamTableViewController: UITableViewController, MFMessageComposeViewControllerDelegate, MFMailComposeViewControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -116,4 +117,34 @@ class myTeamTableViewController: UITableViewController {
         
     }
 
+    @IBAction func messageButtonPressed(_ sender: UIButton) {
+        
+        guard MFMessageComposeViewController.canSendText() else {
+            return
+        }
+        
+        let messageVC = MFMessageComposeViewController()
+        
+        messageVC.body = "Enter a message";
+        messageVC.recipients = ["Enter tel-nr"]
+        messageVC.messageComposeDelegate = self
+        
+        self.present(messageVC, animated: true, completion: nil)
+    }
+    
+    func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
+        switch (result) {
+        case .cancelled:
+            print("Message was cancelled")
+            dismiss(animated: true, completion: nil)
+        case .failed:
+            print("Message failed")
+            dismiss(animated: true, completion: nil)
+        case .sent:
+            print("Message was sent")
+            dismiss(animated: true, completion: nil)
+        default:
+            break
+        }
+    }
 }

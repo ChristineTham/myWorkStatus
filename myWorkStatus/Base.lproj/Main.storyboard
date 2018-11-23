@@ -79,32 +79,52 @@
                                             <rect key="frame" x="10" y="10" width="100" height="100"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="100" id="O9w-4w-17u"/>
-                                                <constraint firstAttribute="width" secondItem="7lo-Ag-K54" secondAttribute="height" multiplier="1:1" id="fgh-xX-yA1"/>
                                                 <constraint firstAttribute="width" constant="100" id="yD4-hw-d0E"/>
                                             </constraints>
                                         </imageView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="2ed-oQ-9hc">
-                                            <rect key="frame" x="120" y="0.0" width="255" height="119.5"/>
+                                            <rect key="frame" x="120" y="10" width="245" height="99.5"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GFD-ad-ZHa">
-                                                    <rect key="frame" x="0.0" y="0.0" width="255" height="69.5"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hws-bk-YWA">
+                                                    <rect key="frame" x="0.0" y="0.0" width="245" height="50"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GFD-ad-ZHa">
+                                                            <rect key="frame" x="0.0" y="0.0" width="195" height="50"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="50" id="CU6-mT-QTK"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gQ8-hQ-hyL">
+                                                            <rect key="frame" x="195" y="0.0" width="50" height="50"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="50" id="A8B-rR-Vv9"/>
+                                                                <constraint firstAttribute="width" constant="50" id="NH1-4F-DbB"/>
+                                                            </constraints>
+                                                            <state key="normal" image="icons8-chat_filled"/>
+                                                            <connections>
+                                                                <action selector="messageButtonPressed:" destination="we4-lh-qMv" eventType="touchUpInside" id="8uh-JT-izf"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                </stackView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="s20-zs-WNd">
-                                                    <rect key="frame" x="0.0" y="69.5" width="255" height="50"/>
+                                                    <rect key="frame" x="0.0" y="50" width="245" height="49.5"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AtDesk" translatesAutoresizingMaskIntoConstraints="NO" id="YfO-tv-jhy">
-                                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="50" height="49.5"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="50" id="NTo-Rf-WG8"/>
                                                                 <constraint firstAttribute="height" constant="50" id="WZJ-G7-06e"/>
-                                                                <constraint firstAttribute="width" secondItem="YfO-tv-jhy" secondAttribute="height" multiplier="1:1" id="eKS-rB-xvH"/>
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aFK-dw-pjA">
-                                                            <rect key="frame" x="60" y="0.0" width="195" height="50"/>
+                                                            <rect key="frame" x="60" y="0.0" width="185" height="49.5"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="50" id="gQG-M7-DCU"/>
+                                                            </constraints>
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -115,12 +135,12 @@
                                         </stackView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="2ed-oQ-9hc" firstAttribute="top" secondItem="pKq-cV-VpA" secondAttribute="top" id="2Iw-fE-JDK"/>
-                                        <constraint firstAttribute="trailing" secondItem="2ed-oQ-9hc" secondAttribute="trailing" id="OgR-IF-D3M"/>
+                                        <constraint firstAttribute="trailing" secondItem="2ed-oQ-9hc" secondAttribute="trailing" constant="10" id="OgR-IF-D3M"/>
+                                        <constraint firstItem="2ed-oQ-9hc" firstAttribute="top" secondItem="pKq-cV-VpA" secondAttribute="top" constant="10" id="Vba-sx-HY6"/>
                                         <constraint firstItem="7lo-Ag-K54" firstAttribute="top" secondItem="pKq-cV-VpA" secondAttribute="top" constant="10" id="YgK-CA-A4b"/>
+                                        <constraint firstAttribute="bottom" secondItem="2ed-oQ-9hc" secondAttribute="bottom" constant="10" id="ZPP-UD-pyL"/>
                                         <constraint firstItem="2ed-oQ-9hc" firstAttribute="leading" secondItem="7lo-Ag-K54" secondAttribute="trailing" constant="10" id="fuw-U0-OTR"/>
                                         <constraint firstItem="7lo-Ag-K54" firstAttribute="leading" secondItem="pKq-cV-VpA" secondAttribute="leading" constant="10" id="rpz-C9-yQu"/>
-                                        <constraint firstAttribute="bottom" secondItem="2ed-oQ-9hc" secondAttribute="bottom" id="uue-sD-lqV"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -137,7 +157,7 @@
                             <outlet property="delegate" destination="we4-lh-qMv" id="d1C-12-gJO"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="my Team" id="SK5-r1-1y8"/>
+                    <navigationItem key="navigationItem" title="my Team" largeTitleDisplayMode="always" id="SK5-r1-1y8"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3V9-HW-0fM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -528,6 +548,7 @@
         <image name="chris" width="720" height="720"/>
         <image name="icons8-calendar" width="50" height="50"/>
         <image name="icons8-calendar_filled" width="50" height="50"/>
+        <image name="icons8-chat_filled" width="50" height="50"/>
         <image name="icons8-conference_call" width="50" height="50"/>
         <image name="icons8-conference_call_filled" width="50" height="50"/>
         <image name="icons8-person_female" width="50" height="50"/>
