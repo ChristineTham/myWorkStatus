@@ -86,46 +86,31 @@
                                             <rect key="frame" x="120" y="10" width="245" height="99.5"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hws-bk-YWA">
-                                                    <rect key="frame" x="0.0" y="0.0" width="245" height="50"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="245" height="49.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GFD-ad-ZHa">
-                                                            <rect key="frame" x="0.0" y="0.0" width="195" height="50"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="50" id="CU6-mT-QTK"/>
-                                                            </constraints>
+                                                            <rect key="frame" x="0.0" y="0.0" width="245" height="49.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gQ8-hQ-hyL">
-                                                            <rect key="frame" x="195" y="0.0" width="50" height="50"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="50" id="A8B-rR-Vv9"/>
-                                                                <constraint firstAttribute="width" constant="50" id="NH1-4F-DbB"/>
-                                                            </constraints>
-                                                            <state key="normal" image="icons8-chat_filled"/>
-                                                            <connections>
-                                                                <action selector="messageButtonPressed:" destination="we4-lh-qMv" eventType="touchUpInside" id="8uh-JT-izf"/>
-                                                            </connections>
-                                                        </button>
                                                     </subviews>
                                                 </stackView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="s20-zs-WNd">
-                                                    <rect key="frame" x="0.0" y="50" width="245" height="49.5"/>
+                                                    <rect key="frame" x="0.0" y="49.5" width="245" height="50"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AtDesk" translatesAutoresizingMaskIntoConstraints="NO" id="YfO-tv-jhy">
-                                                            <rect key="frame" x="0.0" y="0.0" width="50" height="49.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="50" id="NTo-Rf-WG8"/>
-                                                                <constraint firstAttribute="height" constant="50" id="WZJ-G7-06e"/>
+                                                                <constraint firstAttribute="width" secondItem="YfO-tv-jhy" secondAttribute="height" multiplier="1:1" id="beY-Y2-kOR"/>
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aFK-dw-pjA">
-                                                            <rect key="frame" x="60" y="0.0" width="185" height="49.5"/>
+                                                            <rect key="frame" x="60" y="0.0" width="185" height="50"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="50" id="gQG-M7-DCU"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -172,7 +157,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="HdV-2w-pZO">
-                                <rect key="frame" x="0.0" y="64" width="375" height="500"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="558"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MEB-sh-hjq">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
@@ -220,27 +205,56 @@
                                             <constraint firstItem="NbV-Pb-6Dm" firstAttribute="centerY" secondItem="bdf-7A-HtA" secondAttribute="centerY" id="u64-lL-XRS"/>
                                         </constraints>
                                     </stackView>
+                                    <stackView opaque="NO" contentMode="center" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="vky-6r-hJP">
+                                        <rect key="frame" x="0.0" y="116" width="375" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nTL-hO-YLW">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <state key="normal" image="icons8-ringer_volume_filled"/>
+                                                <connections>
+                                                    <action selector="phoneButtonPressed:" destination="sk9-OZ-MWc" eventType="touchUpInside" id="IZq-bP-j2P"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zRY-G4-uLj">
+                                                <rect key="frame" x="162.5" y="0.0" width="50" height="50"/>
+                                                <state key="normal" image="icons8-chat_filled"/>
+                                                <connections>
+                                                    <action selector="messageButtonPressed:" destination="sk9-OZ-MWc" eventType="touchUpInside" id="r60-Yt-gH2"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8L9-uE-yr8">
+                                                <rect key="frame" x="325" y="0.0" width="50" height="50"/>
+                                                <state key="normal" image="icons8-mail_filled"/>
+                                                <connections>
+                                                    <action selector="mailButtonPressed:" destination="sk9-OZ-MWc" eventType="touchUpInside" id="jxE-LM-QeK"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="lGm-h6-m2v"/>
+                                        </constraints>
+                                    </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello World" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MN4-cT-vzp">
-                                        <rect key="frame" x="0.0" y="116" width="375" height="24"/>
+                                        <rect key="frame" x="0.0" y="174" width="375" height="24"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="textColor" red="0.077977769079999995" green="0.22225621340000001" blue="0.49601054189999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="477pitt-flat" translatesAutoresizingMaskIntoConstraints="NO" id="Fc9-1M-OvN">
-                                        <rect key="frame" x="0.0" y="148" width="375" height="200"/>
+                                        <rect key="frame" x="0.0" y="206" width="375" height="200"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="200" id="g2E-ho-Ve2"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Next Location" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wQm-pk-UJp">
-                                        <rect key="frame" x="0.0" y="356" width="375" height="36"/>
+                                        <rect key="frame" x="0.0" y="414" width="375" height="36"/>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="pDp-uZ-5Tz">
-                                        <rect key="frame" x="0.0" y="400" width="375" height="100"/>
+                                        <rect key="frame" x="0.0" y="458" width="375" height="100"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Next Location" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YJX-F3-cFz">
                                                 <rect key="frame" x="0.0" y="0.0" width="267" height="100"/>
@@ -551,8 +565,10 @@
         <image name="icons8-chat_filled" width="50" height="50"/>
         <image name="icons8-conference_call" width="50" height="50"/>
         <image name="icons8-conference_call_filled" width="50" height="50"/>
+        <image name="icons8-mail_filled" width="50" height="50"/>
         <image name="icons8-person_female" width="50" height="50"/>
         <image name="icons8-person_female_filled" width="50" height="50"/>
+        <image name="icons8-ringer_volume_filled" width="50" height="50"/>
         <image name="icons8-search" width="50" height="50"/>
         <image name="icons8-search_filled" width="50" height="50"/>
         <image name="icons8-settings" width="50" height="50"/>
