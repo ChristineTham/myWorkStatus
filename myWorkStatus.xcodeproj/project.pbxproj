@@ -13,6 +13,7 @@
 		87952DFA21A65C1600A576B2 /* myTeamTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87952DF921A65C1600A576B2 /* myTeamTableViewController.swift */; };
 		87952DFC21A65C6100A576B2 /* myTeamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87952DFB21A65C6100A576B2 /* myTeamTableViewCell.swift */; };
 		87952DFE21A670D800A576B2 /* personStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87952DFD21A670D800A576B2 /* personStatusViewController.swift */; };
+		87EDC5A421ABB7E700868CCC /* addQRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EDC5A321ABB7E700868CCC /* addQRCodeViewController.swift */; };
 		87FF672921A2288400674F7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87FF672821A2288400674F7B /* AppDelegate.swift */; };
 		87FF672E21A2288400674F7B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87FF672C21A2288400674F7B /* Main.storyboard */; };
 		87FF673021A2288900674F7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87FF672F21A2288900674F7B /* Assets.xcassets */; };
@@ -26,6 +27,7 @@
 		87952DF921A65C1600A576B2 /* myTeamTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myTeamTableViewController.swift; sourceTree = "<group>"; };
 		87952DFB21A65C6100A576B2 /* myTeamTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myTeamTableViewCell.swift; sourceTree = "<group>"; };
 		87952DFD21A670D800A576B2 /* personStatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = personStatusViewController.swift; sourceTree = "<group>"; };
+		87EDC5A321ABB7E700868CCC /* addQRCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addQRCodeViewController.swift; sourceTree = "<group>"; };
 		87FF672521A2288400674F7B /* myWorkStatus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myWorkStatus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87FF672821A2288400674F7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		87FF672D21A2288400674F7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 				87952DF921A65C1600A576B2 /* myTeamTableViewController.swift */,
 				87952DFB21A65C6100A576B2 /* myTeamTableViewCell.swift */,
 				87952DFD21A670D800A576B2 /* personStatusViewController.swift */,
+				87EDC5A321ABB7E700868CCC /* addQRCodeViewController.swift */,
 			);
 			path = myWorkStatus;
 			sourceTree = "<group>";
@@ -156,6 +159,7 @@
 				87952DFC21A65C6100A576B2 /* myTeamTableViewCell.swift in Sources */,
 				8733BA0B21A3BA8500AF5B9D /* SampleData.swift in Sources */,
 				87952DFA21A65C1600A576B2 /* myTeamTableViewController.swift in Sources */,
+				87EDC5A421ABB7E700868CCC /* addQRCodeViewController.swift in Sources */,
 				8733BA0921A3675400AF5B9D /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
