@@ -400,7 +400,7 @@
             </objects>
             <point key="canvasLocation" x="2693.5999999999999" y="923.38830584707648"/>
         </scene>
-        <!--my Current Status-->
+        <!--my Status-->
         <scene sceneID="UIX-AD-pRl">
             <objects>
                 <viewController id="2cR-C9-l9a" customClass="myStatusViewController" customModule="myWorkStatus" customModuleProvider="target" sceneMemberID="viewController">
@@ -489,7 +489,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="OAl-aQ-aE3"/>
                     </view>
-                    <navigationItem key="navigationItem" title="my Current Status" largeTitleDisplayMode="always" id="Ibc-ux-u8w">
+                    <navigationItem key="navigationItem" title="my Status" largeTitleDisplayMode="always" id="Ibc-ux-u8w">
                         <barButtonItem key="rightBarButtonItem" title="Update" id="lGu-IW-DDx">
                             <connections>
                                 <segue destination="fRd-Hw-Lxd" kind="show" id="paZ-v2-2lL"/>
