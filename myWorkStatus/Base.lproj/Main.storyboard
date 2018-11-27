@@ -398,7 +398,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M3M-ma-fX9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2693.5999999999999" y="923.38830584707648"/>
+            <point key="canvasLocation" x="3632.8000000000002" y="923.38830584707648"/>
         </scene>
         <!--my Status-->
         <scene sceneID="UIX-AD-pRl">
@@ -492,7 +492,7 @@
                     <navigationItem key="navigationItem" title="my Status" largeTitleDisplayMode="always" id="Ibc-ux-u8w">
                         <barButtonItem key="rightBarButtonItem" title="Update" id="lGu-IW-DDx">
                             <connections>
-                                <segue destination="fRd-Hw-Lxd" kind="show" id="paZ-v2-2lL"/>
+                                <segue destination="ZpB-yU-gT4" kind="presentation" identifier="updateStatus" id="paZ-v2-2lL"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -509,7 +509,7 @@
             </objects>
             <point key="canvasLocation" x="-498.39999999999998" y="923.38830584707648"/>
         </scene>
-        <!--AddQR Code View Controller-->
+        <!--scan QR Code-->
         <scene sceneID="AnG-wB-hTt">
             <objects>
                 <viewController id="fRd-Hw-Lxd" customClass="addQRCodeViewController" customModule="myWorkStatus" customModuleProvider="target" sceneMemberID="viewController">
@@ -519,10 +519,17 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="cyL-Bc-aOM"/>
                     </view>
+                    <navigationItem key="navigationItem" title="scan QR Code" id="3PZ-lN-eqs">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="VBB-FH-rIA">
+                            <connections>
+                                <action selector="cancelButtonPressed:" destination="fRd-Hw-Lxd" id="Kmm-rm-gRk"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="msI-EK-dWC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="274" y="923"/>
+            <point key="canvasLocation" x="1212" y="922.48875562218893"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="See-94-jIv">
@@ -619,7 +626,25 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WuQ-Qo-Moz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1754.4000000000001" y="923.38830584707648"/>
+            <point key="canvasLocation" x="2693.5999999999999" y="923.38830584707648"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="IZv-4F-j6O">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZpB-yU-gT4" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zIq-6g-rON">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="fRd-Hw-Lxd" kind="relationship" relationship="rootViewController" id="zBs-rQ-640"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KM2-h7-2cu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="272.80000000000001" y="922.48875562218893"/>
         </scene>
     </scenes>
     <resources>

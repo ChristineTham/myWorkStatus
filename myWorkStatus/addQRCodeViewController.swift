@@ -104,4 +104,8 @@ class addQRCodeViewController: UIViewController, AVCaptureMetadataOutputObjectsD
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         return .portrait
     }
+    
+    @IBAction func cancelButtonPressed(_ sender: UIBarButtonItem) {
+        dismiss(animated: true)
+    }
 }
